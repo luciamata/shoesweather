@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title> What Do You Need to Wear Today? </title>
+    <script>
+
+    /* Input: Type of weather.
+     * Processing: Figure out which type of shoe,
+     *   depending on the type of weather
+     * Output: Display shoe selection to user.
+     */
+
+    function shoes() {
+
+    // Get user input
+    var weather = document.getElementById('weatherCon').value
+
+    // Choose type of shoes
+    var message;
+    if ( weather == "hot" ) {
+      message = "Sandals";
+    }
+    else if ( weather == "rain" ) {
+      message = "Galoshes";
+    }
+    else if ( weather == "snow") {
+      message = "Boots";
+    }
+    else {
+      message = "Shoes";
+    }
+
+    //Display choice to user
+    document.getElementById('outputDiv').innerHTML = message;
+
+  }
+    </script>
+  </head>
+
+  <body>
+    Please enter the weather conditions, you may choose from hot, rain or snow: <input type="text" id="weatherCon"><br>
+    <button type="button" onclick="shoes()">Click</button> <br>
+    Today, you need to wear: <div id="outputDiv"></div>
+  </body>
+</html>
